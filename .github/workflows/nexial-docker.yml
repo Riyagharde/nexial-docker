@@ -12,9 +12,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-      with:
-      path: $GITHUB_WORKSPACE  # Use $GITHUB_WORKSPACE directly
-      fetch-depth: 0  # Optional, fetch all history if needed
 
     - name: Build the Docker image
       run: |
