@@ -39,6 +39,8 @@ jobs:
                 echo "Automation tests passed."
               fi
 
-
+    - name: Copy output to workspace (Optional - if not modified Dockerfile)
+      run: |
+            docker cp nex:/home/projects/tests/output 
 
                                            
