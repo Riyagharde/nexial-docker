@@ -41,6 +41,6 @@ jobs:
 
     - name: Copy output to workspace (Optional - if not modified Dockerfile)
       run: |
-            docker cp nex:/home/projects/tests/output 
+            docker cp nex:/home/projects/tests/output $GITHUB_WORKSPACE/output
 
                                            
