@@ -38,13 +38,10 @@ jobs:
               else
                 echo "Automation tests passed."
               fi
-
-    - name: Grant write permissions (Optional)
-      run: |
-            chmod -R u+w $(pwd)/output
            
 
     - name: Copy output to workspace (Optional - if not modified Dockerfile)
+      uses: actions/upload-artifact@v2
       run: |
             docker cp nex:/home/projects/tests/output $(pwd)/output
 
