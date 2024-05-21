@@ -38,6 +38,10 @@ jobs:
               else
                 echo "Automation tests passed."
               fi
+    # Grant write permissions to runner user for the parent directory (optional)
+    - name: Grant write permissions (optional)
+      run: chmod -R u+w /home/runner/work/nexial-docker/nexial-docker/output
+
 
     - name: Copy output to workspace (Optional - if not modified Dockerfile)
       run: |
