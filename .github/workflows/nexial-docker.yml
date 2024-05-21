@@ -40,9 +40,8 @@ jobs:
               fi
            
 
-    - name: Copy output to workspace (Optional - if not modified Dockerfile)
-      uses: actions/upload-artifact@v2
-      with:
-          name: output
-          path: /home/projects/tests/output/
+    - name: Check for output files
+      run: |
+            docker exec nex ls /home/projects/tests/output
+
                                            
