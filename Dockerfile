@@ -35,3 +35,5 @@ WORKDIR /home/projects/nexial-core/bin
 RUN ./nexial.sh -version
 
 CMD ["./nexial.sh",  "-script", "/home/projects/tests/artifact/script/RestApi.xlsx"]
+
+COPY /output/* $GITHUB_WORKSPACE
