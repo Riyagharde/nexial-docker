@@ -44,5 +44,5 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
           name: output
-          path: nex:/home/projects/tests/output
+          path: /home/projects/tests/output/
                                            
