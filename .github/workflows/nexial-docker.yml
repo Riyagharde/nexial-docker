@@ -42,7 +42,7 @@ jobs:
 
     - name: Copy output to workspace (Optional - if not modified Dockerfile)
       uses: actions/upload-artifact@v2
-      run: |
-            docker cp nex:/home/projects/tests/output $(pwd)/output
-
+      with:
+          name: output
+          path: nex:/home/projects/tests/output
                                            
