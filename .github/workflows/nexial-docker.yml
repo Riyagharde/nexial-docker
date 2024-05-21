@@ -38,10 +38,11 @@ jobs:
               else
                 echo "Automation tests passed."
               fi
-           
-
-    - name: Check for output files
-      run: |
-            docker exec nex ls /home/projects/tests/output
+              
+    - name: Upload test results
+      uses: actions/upload-artifact@v2
+      with:
+        name: nexial-output
+        path: /home/projects/tests/output   
 
                                            
